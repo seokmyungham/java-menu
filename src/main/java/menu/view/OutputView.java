@@ -16,6 +16,7 @@ public class OutputView {
     }
 
     public void printRecommendResult(Map<DayWeek, Category> resultCategories, Crew crew) {
+        System.out.println();
         System.out.println("메뉴 추천 결과입니다.");
         printWeekDay(resultCategories);
         printCategories(resultCategories);
@@ -23,7 +24,7 @@ public class OutputView {
     }
 
     public void printWeekDay(Map<DayWeek, Category> resultCategories) {
-        StringJoiner stringJoiner = new StringJoiner(" | ", "[ 구분", " ]");
+        StringJoiner stringJoiner = new StringJoiner(" | ", "[ 구분 | ", " ]");
         for (DayWeek dayWeek : resultCategories.keySet()) {
             stringJoiner.add(dayWeek.getName());
         }
@@ -31,7 +32,7 @@ public class OutputView {
     }
 
     public void printCategories(Map<DayWeek, Category> resultCategories) {
-        StringJoiner stringJoiner = new StringJoiner(" | ", "[ 구분", " ]");
+        StringJoiner stringJoiner = new StringJoiner(" | ", "[ 카테고리 | ", " ]");
         for (Category category : resultCategories.values()) {
             stringJoiner.add(category.getName());
         }
@@ -40,7 +41,8 @@ public class OutputView {
 
     public void printMenus(Crew crew) {
         for (Coach coach : crew.getCoaches()) {
-            StringJoiner stringJoiner = new StringJoiner(" | ", "[ 구분", " ]");
+            StringJoiner stringJoiner = new StringJoiner(" | ", "[ ", " ]");
+            stringJoiner.add(coach.getName());
             for (String menuName : coach.getRecommendedMenus()) {
                 stringJoiner.add(menuName);
             }
