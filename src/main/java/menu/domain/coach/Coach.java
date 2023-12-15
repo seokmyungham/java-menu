@@ -1,5 +1,7 @@
 package menu.domain.coach;
 
+import static menu.constant.ErrorMessage.CANT_EAT_MENUS_SIZE_ERROR_MESSAGE;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,5 +22,19 @@ public class Coach {
 
     public boolean alreadyRecommendedMenu(String menuName) {
         return recommendedMenus.contains(menuName);
+    }
+
+    public void addRecommendMenu(String menuName) {
+        recommendedMenus.add(menuName);
+    }
+
+    public List<String> getRecommendedMenus() {
+        return recommendedMenus;
+    }
+
+    private void validateCantEatMenusSize(List<String> cantEatMenus) {
+        if (cantEatMenus.size() > 2) {
+            throw new IllegalArgumentException(CANT_EAT_MENUS_SIZE_ERROR_MESSAGE);
+        }
     }
 }
