@@ -17,4 +17,8 @@ public class Crew {
             throw new IllegalArgumentException(CREW_SIZE_ERROR_MESSAGE);
         }
     }
+
+    public List<Coach> getCoaches() {
+        return coaches;
+    }
 }
