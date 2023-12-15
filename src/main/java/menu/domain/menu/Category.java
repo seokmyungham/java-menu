@@ -25,4 +25,8 @@ public enum Category {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(INVALID_CODE_ERROR_MESSAGE));
     }
+
+    public String getName() {
+        return name;
+    }
 }
