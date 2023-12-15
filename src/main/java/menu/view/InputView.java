@@ -12,7 +12,7 @@ public class InputView {
     }
 
     public String inputCantEatMenus(String coachName) {
-        System.out.printf(INPUT_CANT_EAT_MENUS_PROMPT);
+        System.out.printf(INPUT_CANT_EAT_MENUS_PROMPT, coachName);
         return Console.readLine();
     }
 }
