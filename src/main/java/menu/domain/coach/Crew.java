@@ -9,7 +9,7 @@ public class Crew {
 
     public Crew(List<Coach> coaches) {
         validateCrewSize(coaches);
-        this.coaches = coaches;
+        this.coaches = List.copyOf(coaches);
     }
 
     private void validateCrewSize(List<Coach> coaches) {
