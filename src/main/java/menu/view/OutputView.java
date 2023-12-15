@@ -25,7 +25,7 @@ public class OutputView {
 
     public void printWeekDay(Map<DayWeek, Category> resultCategories) {
         StringJoiner stringJoiner = new StringJoiner(" | ", "[ 구분 | ", " ]");
-        for (DayWeek dayWeek : resultCategories.keySet()) {
+        for (DayWeek dayWeek : DayWeek.values()) {
             stringJoiner.add(dayWeek.getName());
         }
         System.out.println(stringJoiner.toString());
@@ -33,8 +33,8 @@ public class OutputView {
 
     public void printCategories(Map<DayWeek, Category> resultCategories) {
         StringJoiner stringJoiner = new StringJoiner(" | ", "[ 카테고리 | ", " ]");
-        for (Category category : resultCategories.values()) {
-            stringJoiner.add(category.getName());
+        for (DayWeek dayWeek : DayWeek.values()) {
+            stringJoiner.add(resultCategories.get(dayWeek).getName());
         }
         System.out.println(stringJoiner.toString());
     }
