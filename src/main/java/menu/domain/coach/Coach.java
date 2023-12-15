@@ -37,4 +37,8 @@ public class Coach {
             throw new IllegalArgumentException(CANT_EAT_MENUS_SIZE_ERROR_MESSAGE);
         }
     }
+
+    public String getName() {
+        return name.getName();
+    }
 }
