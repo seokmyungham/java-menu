@@ -10,14 +10,16 @@ import menu.domain.menu.Category;
 public class OutputView {
 
     public static final String COMPLETE_MESSAGE = "추천을 완료했습니다.";
+    public static final String START_MESSAGE = "점심 메뉴 추천을 시작합니다.";
+    public static final String RESULT_MESSAGE = "메뉴 추천 결과입니다.";
 
     public void printStartMessage() {
-        System.out.println("점심 메뉴 추천을 시작합니다.");
+        System.out.println(START_MESSAGE);
     }
 
     public void printRecommendResult(Map<DayWeek, Category> resultCategories, Crew crew) {
         System.out.println();
-        System.out.println("메뉴 추천 결과입니다.");
+        System.out.println(RESULT_MESSAGE);
         printWeekDay(resultCategories);
         printCategories(resultCategories);
         printMenus(crew);
