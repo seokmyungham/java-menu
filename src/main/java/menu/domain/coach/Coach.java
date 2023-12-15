@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Coach {
-    private Name name;
-    private List<String> cantEatMenus;
-    private List<String> recommendedMenus;
+    private final Name name;
+    private final List<String> cantEatMenus;
+    private final List<String> recommendedMenus;
 
     public Coach(Name name, List<String> cantEatMenus) {
         this.name = name;

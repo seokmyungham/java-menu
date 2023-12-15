@@ -3,7 +3,7 @@ package menu.domain.coach;
 import static menu.constant.ErrorMessage.COACH_NAME_LENGTH_ERROR_MESSAGE;
 
 public class Name {
-    private String name;
+    private final String name;
 
     public Name(String name) {
         validateNameLength(name);
