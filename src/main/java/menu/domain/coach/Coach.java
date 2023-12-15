@@ -12,6 +12,7 @@ public class Coach {
 
     public Coach(Name name, List<String> cantEatMenus) {
         this.name = name;
+        validateCantEatMenusSize(cantEatMenus);
         this.cantEatMenus = cantEatMenus;
         this.recommendedMenus = new ArrayList<>();
     }
